@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cleaning Quote Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Get Your Cleaning Quote</h2>
+        
+        <label for="homeSize">Home Size (sqft):</label>
+        <input type="number" id="homeSize" min="1" value="1000">
+
+        <label>Window Cleaning:</label>
+        <div class="service-options">
+            <input type="radio" id="windowOutside" name="windowCleaning" value="outside">
+            <label for="windowOutside">Outside Only</label>
+
+            <input type="radio" id="windowInsideOutside" name="windowCleaning" value="insideOutside">
+            <label for="windowInsideOutside">Inside & Outside</label>
+        </div>
+
+        <div class="checkbox-group">
+            <input type="checkbox" id="postConstruction"> Post-Construction Cleaning <br>
+            <input type="checkbox" id="gutterCleaning"> Gutter Cleaning <br>
+        </div>
+
+        <button onclick="calculateQuote()">Get Quote</button>
+
+        <p id="quote">Estimated Price: $0</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
